@@ -20,7 +20,7 @@ function setUpGoogleSheets() {
           'Content-Type': 'application/json'
         },
         mode: 'no-cors', 
-        body: fd 
+        body: JSON.stringify(fd) 
       })
         .then(response => { 
               alert('Success!', response) })
