@@ -9,7 +9,11 @@ function setUpGoogleSheets() {
       btn.disabled = true
       btn.innerHTML = "Sending..."
 
-      let fd = getData(true)
+      let fd = getData(false)
+
+      var json_object = {};
+      fd.forEach((value, key) => json_object[key] = value);
+
       for (const [key, value] of fd) {
         console.log(`${key}: ${value}\n`);
       }
@@ -20,7 +24,7 @@ function setUpGoogleSheets() {
           'Content-Type': 'application/json'
         },
         mode: 'no-cors', 
-        body: JSON.stringify(fd) 
+        body: JSON.stringify(json_object) 
       })
         .then(response => { 
               alert('Success!', response) })
