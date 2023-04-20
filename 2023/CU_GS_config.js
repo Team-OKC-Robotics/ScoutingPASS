@@ -17,7 +17,7 @@ var config_data = `
       "code": "e",
       "gsCol": "event",
       "type": "event",
-      "defaultValue": "2023mokc",
+      "defaultValue": "2023hop",
       "required": "true",
       "disabled": "true"
     },
